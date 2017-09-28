@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ScrollingFormHorizontal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E2z-zf-56k">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z3f-wS-vGX">
+                                        <rect key="frame" x="0.0" y="0.0" width="1125" height="667"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lab" translatesAutoresizingMaskIntoConstraints="NO" id="tpG-OA-Acs">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="husky" translatesAutoresizingMaskIntoConstraints="NO" id="eMA-Wf-Ig6">
+                                                <rect key="frame" x="375" y="0.0" width="375" height="667"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="border" translatesAutoresizingMaskIntoConstraints="NO" id="BRw-6M-8b9">
+                                                <rect key="frame" x="750" y="0.0" width="375" height="667"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="BRw-6M-8b9" firstAttribute="leading" secondItem="eMA-Wf-Ig6" secondAttribute="trailing" id="0mH-R6-1rY"/>
+                                            <constraint firstItem="eMA-Wf-Ig6" firstAttribute="top" secondItem="Z3f-wS-vGX" secondAttribute="top" id="6Hg-cr-jnd"/>
+                                            <constraint firstItem="BRw-6M-8b9" firstAttribute="top" secondItem="Z3f-wS-vGX" secondAttribute="top" id="EiW-um-4Te"/>
+                                            <constraint firstAttribute="bottom" secondItem="eMA-Wf-Ig6" secondAttribute="bottom" id="Vyi-Cs-CaN"/>
+                                            <constraint firstAttribute="trailing" secondItem="BRw-6M-8b9" secondAttribute="trailing" id="Yb1-a1-RG0"/>
+                                            <constraint firstItem="eMA-Wf-Ig6" firstAttribute="leading" secondItem="tpG-OA-Acs" secondAttribute="trailing" id="aXw-lo-rKB"/>
+                                            <constraint firstAttribute="bottom" secondItem="BRw-6M-8b9" secondAttribute="bottom" id="gJL-rI-Aug"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Z3f-wS-vGX" secondAttribute="trailing" id="4y2-A8-zMy"/>
+                                    <constraint firstItem="Z3f-wS-vGX" firstAttribute="leading" secondItem="E2z-zf-56k" secondAttribute="leading" id="I1d-nh-Cys"/>
+                                    <constraint firstItem="Z3f-wS-vGX" firstAttribute="centerY" secondItem="E2z-zf-56k" secondAttribute="centerY" id="Yak-tX-ARe"/>
+                                    <constraint firstItem="Z3f-wS-vGX" firstAttribute="top" secondItem="E2z-zf-56k" secondAttribute="top" id="dcq-rL-3Z1"/>
+                                    <constraint firstItem="Z3f-wS-vGX" firstAttribute="leading" secondItem="E2z-zf-56k" secondAttribute="leading" id="jvA-ym-h5V"/>
+                                    <constraint firstAttribute="bottom" secondItem="Z3f-wS-vGX" secondAttribute="bottom" id="nqj-1u-k0O"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eMA-Wf-Ig6" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="0J3-Nc-0cc"/>
+                            <constraint firstItem="tpG-OA-Acs" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="0nc-l0-daA"/>
+                            <constraint firstItem="BRw-6M-8b9" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="5UB-v7-55A"/>
+                            <constraint firstItem="E2z-zf-56k" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7Ua-2T-t8m"/>
+                            <constraint firstItem="E2z-zf-56k" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="7mF-S2-dOz"/>
+                            <constraint firstItem="E2z-zf-56k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="F5A-Yh-vEA"/>
+                            <constraint firstItem="BRw-6M-8b9" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Jbv-ol-luE"/>
+                            <constraint firstItem="tpG-OA-Acs" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="a8P-t5-02s"/>
+                            <constraint firstItem="eMA-Wf-Ig6" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="mGo-9i-Ta2"/>
+                            <constraint firstItem="E2z-zf-56k" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="mWI-dN-Boa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="border" width="692" height="1024"/>
+        <image name="husky" width="1024" height="640"/>
+        <image name="lab" width="1170" height="780"/>
+    </resources>
+</document>
