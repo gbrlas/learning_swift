@@ -25,8 +25,8 @@ class QuestionViewController: UIViewController {
         Question(text: "Which food do you like the most?",
                  type:.single,
                  answers: [
-                    Answer(text: "Steak", type: .dog),
-                    Answer(text: "Fish", type: .cat),
+                    Answer(text: "Ice Cream", type: .dog),
+                    Answer(text: "Tuna", type: .cat),
                     Answer(text: "Carrots", type: .rabbit),
                     Answer(text: "Corn", type: .turtle)
             ]), Question(text: "Which activities do you enjoy?",
