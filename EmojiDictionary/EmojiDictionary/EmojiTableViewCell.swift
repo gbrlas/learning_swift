@@ -28,7 +28,7 @@ class EmojiTableViewCell: UITableViewCell {
     func update(with emoji: Emoji) {
         symbolLabel.text = emoji.symbol
         nameLabel.text = emoji.name
-        descriptionLabel.text = emoji.description
+        descriptionLabel.text = emoji.detailDescription
     }
 
 }
