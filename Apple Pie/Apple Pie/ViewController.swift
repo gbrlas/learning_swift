@@ -55,7 +55,7 @@ class ViewController: UIViewController {
     }
     
     func updateUI() {
-        let letters = currentGame.formattedWord.characters.map{String($0)}
+        let letters = currentGame.formattedWord.map{String($0)}
         
         correctWordLabel.text = letters.joined(separator: " ")
         

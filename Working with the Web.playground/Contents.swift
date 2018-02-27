@@ -23,9 +23,11 @@ let query: [String: String] = [
 let baseURL = URL(string: "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")!
 let url = baseURL.withQueries(query)!
 let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+    let jsonDecoder = JSONDecoder()
+    
     if let data = data,
-        let string = String(data: data, encoding: .utf8) {
-            print(string)
+        let photoDictionary = try? jsonDecoder.decode([String: String].self, from: data) {
+            print(photoDictionary)
     }
 }
 
