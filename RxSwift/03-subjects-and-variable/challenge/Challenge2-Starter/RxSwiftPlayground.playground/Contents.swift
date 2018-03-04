@@ -16,10 +16,13 @@ example(of: "Variable") {
   let disposeBag = DisposeBag()
   
   // Create userSession Variable of type UserSession with initial value of .loggedOut
-  
+  let userSession = Variable(UserSession.loggedOut)
   
   // Subscribe to receive next events from userSession
-  
+  userSession.asObservable()
+    .subscribe {
+        print($0.element ?? $0)
+    }
   
   func logInWith(username: String, password: String, completion: (Error?) -> Void) {
     guard username == "johnny@appleseed.com",
@@ -30,17 +33,19 @@ example(of: "Variable") {
     }
     
     // Update userSession
-    
+    userSession.value = UserSession.loggedIn
   }
   
   func logOut() {
     // Update userSession
-    
+    userSession.value = .loggedOut
   }
   
   func performActionRequiringLoggedInUser(_ action: () -> Void) {
     // Ensure that userSession is loggedIn and then execute action()
-    
+    if userSession.value == .loggedIn {
+        action()
+    }
   }
   
   for i in 1...2 {
